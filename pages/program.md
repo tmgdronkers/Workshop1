@@ -28,6 +28,8 @@
 </tr>
 </table>
 
+***
+
 <h2>Tuesday May 28, 2024</h2>
 <table>
 <tr>
@@ -55,6 +57,8 @@
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
 </tr>
 </table>
+
+***
 
 <h2>Wednesday May 29, 2024</h2>
 <table>
@@ -87,6 +91,8 @@
 </tr>
 </table>
 
+***
+
 <h2>Thursday May 30, 2024</h2>
 <table>
 <tr>
@@ -114,6 +120,8 @@
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
 </tr>
 </table>
+
+***
 
 <h2>Thursday May 30, 2024</h2>
 <table>
