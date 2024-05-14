@@ -62,7 +62,7 @@
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
 </tr>
 <tr>
-<td>*09:00-10:15*</td><td>Lecture: Techniques to measure transcriptomics</td><td>Carsten Carlberg</td>
+<td>**09:00**-10:15</td><td>Lecture: Techniques to measure transcriptomics</td><td>Carsten Carlberg</td>
 </tr>
 <tr>
 <td>10:15-11:00</td><td>Lecture: Transcriptomics data analysis</td><td>Susan Coort</td>
