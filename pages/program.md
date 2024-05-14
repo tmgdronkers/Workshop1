@@ -1,6 +1,6 @@
 <h1>Workshop program</h1>
 
-<h2>Monday May 27, 2024
+<h2>Monday May 27, 2024</h2>
 <table>
 <tr>
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
