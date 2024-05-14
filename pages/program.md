@@ -71,7 +71,7 @@
 <td>11:00-11:15</td><td>Coffee/tea</td><td> </td>
 </tr>
 <tr>
-<td>11:15-12:00</td><td>Tutorial: Databases containing omics data/td><td>Susan Coort</td>
+<td>11:15-12:00</td><td>Tutorial: Databases containing omics data</td><td>Susan Coort</td>
 </tr>
 <tr>
 <td>12:00-13:00</td><td>Lunch</td><td> </td>
@@ -102,7 +102,7 @@
 <td>11:00-11:15</td><td>Coffee/tea</td><td> </td>
 </tr>
 <tr>
-<td>11:15-12:00</td><td>Lecture: Multi-omics integration/td><td>Denise Slenter</td>
+<td>11:15-12:00</td><td>Lecture: Multi-omics integration</td><td>Denise Slenter</td>
 </tr>
 <tr>
 <td>12:00-13:00</td><td>Lunch</td><td> </td>
@@ -114,3 +114,24 @@
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
 </tr>
 </table>
+
+<h2>Thursday May 30, 2024</h2>
+<table>
+<tr>
+<td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
+</tr>
+<tr>
+<td>09:30-10:15</td><td>Lecture: Research data management</td><td>Mijke Jetten</td>
+</tr>
+<tr>
+<td>10:15-11:00</td><td>Tutorial: Research data management part 1</td><td>All teachers</td>
+</tr>
+<tr>
+<td>11:00-11:15</td><td>Coffee/tea</td><td> </td>
+</tr>
+<tr>
+<td>11:15-12:00</td><td>Tutorial: Research data management part 2</td><td>All teachers</td>
+</tr>
+<tr>
+<td>12:00-13:00</td><td>Lunch to go</td><td> </td>
+</tr>
