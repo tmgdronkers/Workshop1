@@ -52,6 +52,6 @@
 <td>13:00-16:00</td><td>Tutorial metabolomics data analysis</td><td>Denise Slenter</td>
 </tr>
 <tr>
-<td>16:00-17:00 </td><td>GQuiz and Q&A/td><td> </td>
+<td>16:00-17:00 </td><td>GQuiz and Q&A</td><td> </td>
 </tr>
 </table>
