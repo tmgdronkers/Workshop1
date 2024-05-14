@@ -1,7 +1,5 @@
 <h1>Workshop program</h1>
 
-***
-
 <h2>Monday May 27, 2024
 <table>
 <tr>
