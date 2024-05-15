@@ -62,5 +62,5 @@
 
 * <a href="https://www.linkedin.com/in/mijke-jetten-21336917/" target="_blank">Dr. Mijke Jetten</a>
 <br/> Research Data Management/Data stewardship
-<br/> FAIR Data Lead & Community Manager Data Stewardship at [Health-RI](https://www.health-ri.nl/)
+<br/> FAIR Data Lead & Community Manager Data Stewardship at [Health-RI](https://www.health-ri.nl/), the Netherlands
 ***
