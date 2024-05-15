@@ -28,7 +28,7 @@
 </tr>
 </table>
 
-***
+
 
 <h2>Tuesday May 28, 2024</h2>
 <table>
@@ -58,7 +58,7 @@
 </tr>
 </table>
 
-***
+
 
 <h2>Wednesday May 29, 2024</h2>
 <table>
@@ -91,7 +91,7 @@
 </tr>
 </table>
 
-***
+
 
 <h2>Thursday May 30, 2024</h2>
 <table>
@@ -121,7 +121,7 @@
 </tr>
 </table>
 
-***
+
 
 <h2>Thursday May 30, 2024</h2>
 <table>
