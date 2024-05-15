@@ -114,7 +114,7 @@
 <td>12:00-13:00</td><td>Lunch</td><td> </td>
 </tr>
 <tr>
-<td>13:00-16:00</td><td>Tutorial pathway and network analysis</td><td>All teachers</td>
+<td>13:00-16:00</td><td>Tutorial: Pathway and network analysis</td><td>All teachers</td>
 </tr>
 <tr>
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
