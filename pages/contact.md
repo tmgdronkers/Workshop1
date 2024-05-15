@@ -3,7 +3,7 @@
 <tr>
 <td><img src="../images/Susan.jpg"/></td>
 <td>
-<b><a href="https://www.linkedin.com/in/susan-steinbusch-coort-6a47542/" target="_blank">Susan Coort</a></b>
+<b><a href="https://www.linkedin.com/in/susan-steinbusch-coort-6a47542/" target="_blank">Dr. Susan Coort</a></b>
 <br/> Nutrigenomics/Multi-omics data analysis/Pathway and Network analysis
 <br/> Associate professor at the Dept. of Bioinformatics (<a href="https://www.bigcat.unimaas.nl/" target="_blank">BiGCaT</a>), Maastricht University, the Netherlands
 <br/><a href="mailto:susan.coort@maastrichtuniversity.nl">Email Susan</a>
@@ -12,7 +12,7 @@
 <tr>
 <td><img src="../images/Tina.jpg"/></td>
 <td>
-<b><a href="https://www.linkedin.com/in/mkutmon/" target="_blank">Martina Summer-Kutmon</a></b>
+<b><a href="https://www.linkedin.com/in/mkutmon/" target="_blank">Dr. Martina Summer-Kutmon</a></b>
 <br/>Immunometabolism/Pathway and Network analysis/Data integration and visualization
 <br/> Assistant professor at the Maastricht Centre for Systems Biology (<a href="https://www.maastrichtuniversity.nl/research/maastricht-centre-systems-biology" target="_blank">MaCSBio</a>), Maastricht University, the Netherlands
 <br/><a href="mailto:martina.kutmon@maastrichtuniversity.nl">Email Martina</a>
