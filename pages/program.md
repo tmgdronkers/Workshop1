@@ -45,13 +45,13 @@
 <td>11:00-11:15</td><td>Coffee/tea</td><td> </td>
 </tr>
 <tr>
-<td>11:15-12:00</td><td>Tutorial: setting up analysis environment</td><td>Denise Slenter</td>
+<td>11:15-12:00</td><td>Tutorial: Setting up analysis environment</td><td>Denise Slenter</td>
 </tr>
 <tr>
 <td>12:00-13:00</td><td>Lunch</td><td> </td>
 </tr>
 <tr>
-<td>13:00-16:00</td><td>Tutorial metabolomics data analysis</td><td>All teachers</td>
+<td>13:00-16:00</td><td>Tutorial: Metabolomics data analysis</td><td>All teachers</td>
 </tr>
 <tr>
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
@@ -81,7 +81,7 @@
 <td>12:00-13:00</td><td>Lunch</td><td> </td>
 </tr>
 <tr>
-<td>13:00-16:00</td><td>Tutorial transcriptomics data analysis</td><td>All teachers</td>
+<td>13:00-16:00</td><td>Tutorial: Transcriptomics data analysis</td><td>All teachers</td>
 </tr>
 <tr>
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
