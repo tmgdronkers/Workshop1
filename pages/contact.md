@@ -4,8 +4,8 @@
 <td><img src="../images/Susan.jpg"/></td>
 <td>
 <b><a href="https://www.linkedin.com/in/susan-steinbusch-coort-6a47542/" target="_blank">Susan Coort</a></b>
-<br/> Pathway analysis
-<br/> Assistant professor at the Department of Bioinformatics (<a href="https://www.bigcat.unimaas.nl/" target="_blank">BiGCaT</a>), Maastricht University
+<br/> Nutrigenomics/Multi-omics data analysis/Pathway analysis
+<br/> Associate professor at the (<a href="https://www.bigcat.unimaas.nl/" target="_blank">Department of Bioinformatics-BiGCaT</a>), Maastricht University
 </td>
 </tr>
 <tr>
