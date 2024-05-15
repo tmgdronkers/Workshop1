@@ -14,11 +14,6 @@
 
 <h2>Papers related to the tools</h2>
 
-> **[PathVisio 3: An Extendable Pathway Analysis Toolbox](https://doi.org/10.1371/journal.pcbi.1004085)**.
-<br/>Martina Kutmon, Martijn P. van Iersel, Anwesha Bohler, Thomas Kelder, Nuno Nunes, Alexander R. Pico, Chris T. Evelo 
-<br/>PLoS Comput Biol 11(2): e1004085 (2015).
-<br/>doi: [10.1371/journal.pcbi.1004085](https://doi.org/10.1371/journal.pcbi.1004085) 
-
 > **[WikiPathways: connecting communities](https://doi.org/10.1093/nar/gkaa1024)**.
 <br/>Martens M, Ammar A, Riutta A, Waagmeester A, Slenter DN, Hanspers K, Miller RA, Digles D, Lopes EN, Ehrhart F, Dupuis LJ, Winckers LA, Coort SL, Willighagen EL, Evelo CT, Pico AR, Kutmon M.
 <br/>Nucleic Acids Res. 49(D1):D613-D621 (2021).
