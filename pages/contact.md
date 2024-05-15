@@ -13,7 +13,7 @@
 <td><img src="../images/Tina.jpg"/></td>
 <td>
 <b><a href="https://www.linkedin.com/in/mkutmon/" target="_blank">Martina Summer-Kutmon</a></b>
-<br/>Immunometabolism/Pathway and Network analysis/Data integration and visualization/Tool development
+<br/>Immunometabolism/Pathway and Network analysis/Data integration and visualization
 <br/> Assistant professor at the Maastricht Centre for Systems Biology (<a href="https://www.maastrichtuniversity.nl/research/maastricht-centre-systems-biology" target="_blank">MaCSBio</a>), Maastricht University, the Netherlands
 <br/> mailto:martina.kutmon@maastrichtuniversity.nl
 </td>
