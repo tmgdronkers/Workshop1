@@ -24,7 +24,7 @@
 <td>16:00-17:00</td><td>RDC introductions (5 min each)</td><td> </td>
 </tr>
 <tr>
-<td>17:00- </td><td>Get to know each other + dinner at SAAM</td><td>
+<td>17:00- </td><td>Get to know each other + dinner at SAAM</td> <td>
 </tr>
 </table>
 
