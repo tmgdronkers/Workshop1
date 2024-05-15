@@ -6,7 +6,7 @@
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
 </tr>
 <tr>
-<td>13:00-13:10</td><td>Welcome to Maastricht</td><td>Susan Coort</td>
+<td>13:00-13:10</td><td>Welcome</td><td>Susan Coort</td>
 </tr>
 <tr>
 <td>13:10-14:00</td><td>Lecture: NUTRIOME project introduction</td><td>Stine Ulven</td>
