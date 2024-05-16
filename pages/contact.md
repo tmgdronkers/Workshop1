@@ -57,10 +57,10 @@
 <br/> Professor at [Institute Food & Health and Conway institute](https://www.ucd.ie/foodandhealth/), University College of Dublin, Ireland
 
 * <a href="https://welcome2.pan.olsztyn.pl/people/carsten-carlberg/" target="_blank">Prof. dr. Carsten Carlberg</a>
-<br/> Epigenomics/Transcriptomocs/Vitamin D
+<br/> Epigenomics/Transcriptomics/Vitamin D
 <br/> Professor at the [Institute of Animal Reproduction and Food Research](https://welcome2.pan.olsztyn.pl/), Polish Academy of Sciences in Olsztyn, Poland
 
 * <a href="https://www.linkedin.com/in/mijke-jetten-21336917/" target="_blank">Dr. Mijke Jetten</a>
-<br/> Research Data Management/Data stewardship
+<br/> Research Data Management/Data Stewardship
 <br/> FAIR Data Lead & Community Manager Data Stewardship at [Health-RI](https://www.health-ri.nl/), the Netherlands
 
