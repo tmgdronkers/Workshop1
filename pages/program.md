@@ -51,7 +51,7 @@
 <td>12:00-13:00</td><td>Lunch</td><td> </td>
 </tr>
 <tr>
-<td>13:00-16:00</td><td>Tutorial: Metabolomics data analysis</td><td>All teachers</td>
+<td>13:00-16:00</td><td>Tutorial: Metabolomics data analysis</td><td>Denise, Martina, Susan</td>
 </tr>
 <tr>
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
@@ -81,7 +81,7 @@
 <td>12:00-13:00</td><td>Lunch</td><td> </td>
 </tr>
 <tr>
-<td>13:00-16:00</td><td>Tutorial: Transcriptomics data analysis</td><td>All teachers</td>
+<td>13:00-16:00</td><td>Tutorial: Transcriptomics data analysis</td><td>Martina, Susan</td>
 </tr>
 <tr>
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
@@ -114,7 +114,7 @@
 <td>12:00-13:00</td><td>Lunch</td><td> </td>
 </tr>
 <tr>
-<td>13:00-16:00</td><td>Tutorial: Pathway and network analysis</td><td>All teachers</td>
+<td>13:00-16:00</td><td>Tutorial: Pathway and network analysis</td><td>Denise, Martina, Susan</td>
 </tr>
 <tr>
 <td>16:00-17:00 </td><td>Quiz and Q&A</td><td> </td>
@@ -132,13 +132,13 @@
 <td>09:30-10:15</td><td>Lecture: Research data management</td><td>Mijke Jetten</td>
 </tr>
 <tr>
-<td>10:15-11:00</td><td>Tutorial: Research data management part 1</td><td>All teachers</td>
+<td>10:15-11:00</td><td>Tutorial: Research data management part 1</td><td>Martina, Susan</td>
 </tr>
 <tr>
 <td>11:00-11:15</td><td>Coffee/tea</td><td> </td>
 </tr>
 <tr>
-<td>11:15-12:00</td><td>Tutorial: Research data management part 2</td><td>All teachers</td>
+<td>11:15-12:00</td><td>Tutorial: Research data management part 2</td><td>Martina, Susan</td>
 </tr>
 <tr>
 <td>12:00-13:00</td><td>Lunch to go</td><td> </td>
