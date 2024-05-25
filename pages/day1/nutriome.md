@@ -6,6 +6,7 @@
 * Nutrigenomics and precision nutrition by Stine Ulven
 
 <h2> RDC presentations </h2>
+
 * Leander Waddell
 * Parcival Maissan
 * Tilde Kristine Martinsen 
@@ -16,7 +17,7 @@
 * Isabelle Dombeck
 * Maria Persson
 * Tessa Dronkers
-</ol>
+
 
 
 
