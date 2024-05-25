@@ -1,6 +1,6 @@
 <h2>Lecture slides</h2>
 
-* Welcome by Susan Coort
+* Welcome by Susan Coort/Martina Kutmon
 * NUTRIOME project by Stine Ulven
 * NUTRIOME management by Hege Berg Henriksen
 * Nutrigenomics and precision nutrition by Stine Ulven
