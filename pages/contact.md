@@ -28,7 +28,7 @@
 </td>
 </tr>
 <tr>
-<td><img src="../images/Petra.jpg"/></td>
+<td><img src="../images/Petra.JPEG"/></td>
 <td>
 <b><a href="https://www.maastrichtuniversity.nl/prm-aspers" target="_blank">Petra Aspers</a></b>
 <br/> Office Manager at the Dept. of Bioinformatics (<a href="https://www.bigcat.unimaas.nl/" target="_blank">BiGCaT</a>), Maastricht University, the Netherlands
