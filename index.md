@@ -1,7 +1,6 @@
 ## Welcome to the NUTRIOME Workshop
 #### Date: May 27-31, 2024
 #### Location: Maastricht University, the Netherlands
-####
 
 
 | [May27](pages/day1/nutriome.md) | [May28](pages/day2) | [May29](pages/day3) | [May30](pages/day4)  | [May31](pages/day5) |
