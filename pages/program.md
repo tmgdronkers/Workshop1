@@ -50,7 +50,7 @@
 <td>11:15-12:00</td><td>Tutorial: Setting up analysis environment</td><td>Denise Slenter</td>
 </tr>
 <tr>
-<td>12:00-13:00</td><td>Lunch</td><td> </td>
+<td>12:00-13:00</td><td>Lunch</td><td>3-landenpunt UNS40</td>
 </tr>
 <tr>
 <td>13:00-16:00</td><td>Tutorial: Metabolomics data analysis</td><td>Denise, Martina, Susan</td>
@@ -81,7 +81,7 @@
 <td>11:15-12:00</td><td>Tutorial: Databases containing omics data</td><td>Susan Coort</td>
 </tr>
 <tr>
-<td>12:00-13:00</td><td>Lunch</td><td> </td>
+<td>12:00-13:00</td><td>Lunch</td><td>Ad Fundum B-1.03</td>
 </tr>
 <tr>
 <td>13:00-16:00</td><td>Tutorial: Transcriptomics data analysis</td><td>Martina, Susan</td>
@@ -115,7 +115,7 @@
 <td>11:15-12:00</td><td>Lecture: Multi-omics integration</td><td>Denise Slenter</td>
 </tr>
 <tr>
-<td>12:00-13:00</td><td>Lunch</td><td> </td>
+<td>12:00-13:00</td><td>Lunch</td><td>3-landenpunt UNS40</td>
 </tr>
 <tr>
 <td>13:00-16:00</td><td>Tutorial: Pathway and network analysis</td><td>Denise, Martina, Susan</td>
