@@ -6,7 +6,7 @@
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
 </tr>
 <tr>
-<td>13:00-13:10</td><td>Welcome</td><td>Susan Coort</td>
+<td>13:00-13:10</td><td>Welcome</td><td>Susan Coort/Martina Kutmon</td>
 </tr>
 <tr>
 <td>13:10-14:00</td><td>Lecture: NUTRIOME project introduction</td><td>Stine Ulven</td>
@@ -132,13 +132,13 @@
 <td>09:30-10:15</td><td>Lecture: Research data management</td><td>Mijke Jetten</td>
 </tr>
 <tr>
-<td>10:15-11:00</td><td>Tutorial: Research data management part 1</td><td>Martina, Susan</td>
+<td>10:15-11:00</td><td>Tutorial: Research data management part 1</td><td>Mijke, Martina, Susan</td>
 </tr>
 <tr>
 <td>11:00-11:15</td><td>Coffee/tea</td><td> </td>
 </tr>
 <tr>
-<td>11:15-12:00</td><td>Tutorial: Research data management part 2</td><td>Martina, Susan</td>
+<td>11:15-12:00</td><td>Tutorial: Research data management part 2</td><td>Mijke, Martina, Susan</td>
 </tr>
 <tr>
 <td>12:00-13:00</td><td>Lunch to go</td><td> </td>
