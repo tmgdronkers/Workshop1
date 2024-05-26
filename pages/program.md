@@ -1,6 +1,7 @@
 <h1>Workshop program</h1>
 
 <h2>Monday May 27, 2024</h2>
+<h4>Location: Universiteitssingel 60, Co-Greepzaal (M5.01), 6229 ER Maastricht</h4>
 <table>
 <tr>
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
@@ -31,6 +32,7 @@
 
 
 <h2>Tuesday May 28, 2024</h2>
+<h4>Location: Universiteitssingel 60, Co-Greepzaal (M5.01), 6229 ER Maastricht</h4>
 <table>
 <tr>
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
@@ -61,6 +63,7 @@
 
 
 <h2>Wednesday May 29, 2024</h2>
+<h4>Location: <a href="https://drive.google.com/file/d/1O6JkN4lLeu9cgG1Q154yKMWHlfV3jOwu/view?usp=sharing" target="_blank">Tongersestraat 53a</a>, first floor, room G1.17, 6211 LM Maastricht</h4>
 <table>
 <tr>
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
@@ -94,6 +97,7 @@
 
 
 <h2>Thursday May 30, 2024</h2>
+<h4>Location: Universiteitssingel 60, Co-Greepzaal (M5.01), 6229 ER Maastricht</h4>
 <table>
 <tr>
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
@@ -124,6 +128,7 @@
 
 
 <h2>Friday May 31, 2024</h2>
+<h4>Location: Universiteitssingel 60, Co-Greepzaal (M5.01), 6229 ER Maastricht</h4>
 <table>
 <tr>
 <td><b>Time</b></td><td><b>Topic</b></td><td><b>Teacher</b></td>
