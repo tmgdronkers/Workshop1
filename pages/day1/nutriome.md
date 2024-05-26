@@ -5,7 +5,7 @@
 * NUTRIOME management by Hege Berg Henriksen
 * Nutrigenomics and precision nutrition by Stine Ulven
 
-<h2> RDC presentations </h2>
+<h2><a href="https://drive.google.com/drive/folders/1ExyXx8XFxIzvynQbvMOvQCFk2VkLb8JX?usp=sharing" target="_blank">RDC presentations</a></h2>
 
 * Leander Waddell
 * Parcival Maissan
@@ -17,7 +17,6 @@
 * Isabelle Dombeck
 * Maria Persson
 * Tessa Dronkers
-
 
 
 
