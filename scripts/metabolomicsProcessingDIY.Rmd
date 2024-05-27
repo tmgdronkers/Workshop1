@@ -23,7 +23,7 @@ library(dplyr)
 library(stringr)
 ```
 
-##Locate the data (in the file explorer) and load it in R
+## Locate the data (in the file explorer) and load it in R
 ```{r}
 #Download ‘readxl’ package
 #Load the ‘readxl’ package
@@ -32,3 +32,32 @@ library(stringr)
 #Read the first tab of the data file
 ```
 
+## Second programming tasks
+```{r}
+#Use the search box to find sample ‘2_A5’
+
+# Convert the textual 'NA' labels with the real NA (not available)
+metabolomicsData[metabolomicsData == "NA"] <- NA
+
+# Check how many NAs are part of sample '2_A5'.
+sum(is.na(metabolomicsData$`Sample name` == "...")) ##Fill in the missing information at the '...'
+
+# Install the required package
+####..... missing step ...####
+####..... missing step ...####
+
+#Visualize this information in a heatmap
+heatmaply::heatmaply(is.na10(metabolomicsData[,3:100], grid_gap = 1, colors = heat.colors(200), showticklabels = c(T, F), margins = c(80, 10)))
+```
+
+## Third programming tasks
+```{r}
+# Make sure all data is captured as numbers (numeric!)
+metabolomicsData <- data.frame(metabolomicsData[,1:2], lapply(metabolomicsData[,3:length(metabolomicsData)],as.numeric))
+
+# Remove rows with too many NAs
+metabolomicsData <- metabolomicsData[complete.cases(metabolomicsData[ , 3:length(metabolomicsData)]),]
+
+# Visualize all information in a heatmap
+####..... missing step ...#### Tip: use the previous line of code for heatmaply, without counting NAs. When in doubt, type ?heatmaply in the console below, to open a help menu for this function and example.
+```
