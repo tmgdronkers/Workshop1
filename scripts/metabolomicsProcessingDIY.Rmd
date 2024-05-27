@@ -23,3 +23,12 @@ library(dplyr)
 library(stringr)
 ```
 
+##Locate the data (in the file explorer) and load it in R
+```{r}
+#Download ‘readxl’ package
+#Load the ‘readxl’ package
+
+#Add data location as variable
+#Read the first tab of the data file
+```
+
