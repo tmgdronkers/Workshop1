@@ -94,7 +94,7 @@ all(metabolomicsDataGroups$Timepoint == metabolomicsDataGroups$time) ##If this i
 
 #Count number of columns
 ##columns <- ncol(metabolomicsDataGroups) ##To apply transformation on all columns
-columns <- 103 ##To use the actual data, not calculated ratios based on this data.
+columns <- 102 ##To use the actual data, not calculated ratios based on this data.
 
 ##Transformation (see https://doi.org/10.1177%2F1469066720918446 and https://www.statology.org/transform-data-in-r/)
 ##Users can select different transformation styles here:
@@ -135,4 +135,91 @@ percentageThreshold <- floor(((columns)/10)*7.5) #Now set at 75% (7.5); can be s
 #Print relevant information:
 if(metabolomicsDataGroups_transformed_Shapiro_pvalues_sum[1] > percentageThreshold ){paste0("Data after ", transformation ," transformation seems to follow a normal distribution for 75% or more of your data")} else{
   print("Advised to select a different data transformation procedure")}
+
+# Visualize all information in a heatmap
+```
+
+
+# Find Outliers by visualising violin plots (combination of boxplot and Kernel plot)
+```{r}
+# Libraries (dplyr already previously loaded but also important)
+if(!"ggplot2" %in% installed.packages()){install.packages("ggplot2")}
+library(ggplot2)
+if(!"forcats" %in% installed.packages()){install.packages("forcats")}
+library(forcats)
+if(!"hrbrthemes" %in% installed.packages()){install.packages("hrbrthemes")}
+library(hrbrthemes)
+if(!"viridis" %in% installed.packages()){install.packages("viridis")}
+library(viridis)
+if(!"ggbeeswarm" %in% installed.packages()){install.packages("ggbeeswarm")}
+library(ggbeeswarm)
+
+##### Example data to check if setup of packages is correct #####
+# Load dataset from github
+data <- read.table("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/10_OneNumSevCatSubgroupsSevObs.csv", header=T, sep=",") %>%
+  mutate(tip = round(tip/total_bill*100, 1))
+  
+# Grouped
+data %>%
+  mutate(day = fct_reorder(day, tip)) %>%
+  mutate(day = factor(day, levels=c("Thur", "Fri", "Sat", "Sun"))) %>%
+  ggplot(aes(fill=sex, y=tip, x=day)) + 
+    geom_violin(position="dodge", alpha=0.5, outlier.colour="transparent") +
+    scale_fill_viridis(discrete=T, name="") +
+    theme_ipsum()  +
+    xlab("") +
+    ylab("Tip (%)") +
+    ylim(0,40)
+```
+
+# Find Outliers by visualising violin plots on own data
+```{r}
+##### Example data to check if setup of packages is correct #####
+# Load dataset from github
+data <- read.table("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/10_OneNumSevCatSubgroupsSevObs.csv", header=T, sep=",") %>%
+  mutate(tip = round(tip/total_bill*100, 1))
+
+lipidClassName <- 'IDL.L'
+columnNumber <- which( colnames(metabolomicsDataGroups_transformed)==lipidClassName )
+maxVerticalAxis <- max(metabolomicsDataGroups_transformed[,columnNumber])
+  
+# Grouped
+metabolomicsDataGroups_transformed %>%
+  mutate(Diet =  fct_reorder(Diet, IDL.L)) %>%
+  mutate(Diet = factor(Diet, levels=c("Control", "Experimental"))) %>%
+  ggplot(aes(fill=Diet, y=IDL.L, x=time)) + 
+    geom_violin(position="dodge", alpha=0.5, trim = FALSE, scale = "count") +
+    geom_quasirandom() + ##Alternativ geom_beeswarm() + 
+    scale_fill_viridis(discrete=T, name="Timepoints") +
+    theme_ipsum()  +
+    xlab(lipidClassName) +
+    ylab("Measurement (transformed)") +
+    ylim(0,maxVerticalAxis)
+```
+
+
+# Use Bubble chart to inspect cleaned up data from Nightingale
+```{r}
+if(!"bubbleHeatmap" %in% installed.packages()){install.packages("bubbleHeatmap")}
+library(bubbleHeatmap)
+
+##### Example data to check if setup of packages is correct #####
+
+#> Loading required package: grid
+#> 
+myData <- merge_template(cetp, "ckb_id")
+metabTree <- metabFigure(myData)
+
+gridData <- formatData(myData, colorValue="estimate", sizeValue = "negLog10P", nightingale = TRUE)
+
+treeInput <- multiPlotInput(colorList=gridData$colorList, 
+                            sizeList=gridData$sizeList, 
+                            nightingale=TRUE, legendHeight=8)
+
+treeList <- bubbleHeatmapList(treeInput)
+
+metabTree <- metabFigurePlot(treeList)
+
+grid.newpage()
+grid.draw(metabTree)
 ```
