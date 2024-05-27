@@ -21,13 +21,13 @@
   </head>
   <body>
     <header class="page-header" role="banner">
-      <h1><img src="../images/nutriome_small.png" alt="" width="100" style="vertical-align:middle;margin:0px 8px"><b>NUTRIOME workshop</b></h1>
+      <h1><img src="{{ '/images/nutriome_small.png' | append: site.github.build_revision | relative_url }}" alt="" width="100" style="vertical-align:middle;margin:0px 8px"><b>NUTRIOME workshop</b></h1>
       <h2 class="project-tagline">Large-scale data handling and using tools to visualise multi-layered data from meal studies</h2>
-      <a href="{{ '' }}" class="btn">Home</a>
-      <a href="{{ '//pages/program' | relative_url }}" class="btn">Program</a>
-      <a href="{{ '//pages/tutorials' | relative_url }}" class="btn">Tutorials</a>
-      <a href="../pages/literature" class="btn">Literature</a>
-      <a href="../pages/contact" class="btn">Contact</a>
+      <a href="{{ '' | append: site.github.build_revision | relative_url }}" class="btn">Home</a>
+      <a href="{{ '/pages/program' | append: site.github.build_revision | relative_url }}" class="btn">Program</a>
+      <a href="{{ '/pages/tutorials' | append: site.github.build_revision | relative_url }}" class="btn">Tutorials</a>
+      <a href="{{ '/pages/literature' | append: site.github.build_revision | relative_url }}" class="btn">Literature</a>
+      <a href="{{ '/pages/contact' | append: site.github.build_revision | relative_url }}" class="btn">Contact</a>
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -36,7 +36,7 @@
       <footer class="site-footer">
         <!--<span class="site-footer-owner">--><a href="https://github.com/NUTRIOME/Workshop1">NUTRIOME workshop1</a> is developed by the department of Bioinformatics-BiGCaT and the Maastricht Centre for Systems Biology (MaCSBio) at Maastricht University (NL).<!--</span>-->
        <div class="logo">
-                    <img src="../images/logo_nutriome.png" style="width: 700px; height: auto;">
+                    <img src="{{ '/images/logo_nutriome.png' | append: site.github.build_revision | relative_url }}" style="width: 700px; height: auto;">
                 </div>
       
       </footer>
