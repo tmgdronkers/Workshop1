@@ -1,5 +1,5 @@
-url: 'https://https://susancoort.github.io/NUTRIOMEworkshop1.github.io/'
-baseurl: '/NUTRIOMEworkshop1.github.io'
+url: 'https://https://NUTRIOME.github.io/Workshop1'
+baseurl: '/workshop1'
 
 theme: jekyll-theme-cayman
-logo_url: 'https://NUTRIOMEworkshop1.github.io/images/logo_nutriome.png'
+logo_url: 'images/logo_nutriome.png'
