@@ -1,0 +1,25 @@
+---
+title: "metabolomicsProcessingDIY"
+author: 
+- "DeniseSl22"
+- "YourGithubUserName"
+date: "17/05/24"
+output:
+ md_document:
+    variant: markdown_github
+always_allow_html: true
+---
+## Introduction
+In this section of the workflow, we will obtain the metabolomics data and apply filtering options, to create a dataset ready for further statistical and pathway analysis (on Thursday).
+
+## First, we setup the required libraries to get started.
+```{r setup, warning=FALSE, message=FALSE}
+# check if libraries are already installed > otherwise install it
+if(!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager",repos = "http://cran.us.r-project.org")
+if(!"dplyr" %in% installed.packages()) BiocManager::install("dplyr")
+if(!"stringr" %in% installed.packages()){install.packages("stringr")}
+#load libraries
+library(dplyr)
+library(stringr)
+```
+
