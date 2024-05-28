@@ -197,29 +197,38 @@ metabolomicsDataGroups_transformed %>%
     ylim(0,maxVerticalAxis)
 ```
 
-
-# Use Bubble chart to inspect cleaned up data from Nightingale
+# Visualising ratio data
 ```{r}
-if(!"bubbleHeatmap" %in% installed.packages()){install.packages("bubbleHeatmap")}
-library(bubbleHeatmap)
+### To be added by you!
 
-##### Example data to check if setup of packages is correct #####
+# Find the correct dataframe, and use the right column numbers sequence.
+```
 
-#> Loading required package: grid
-#> 
-myData <- merge_template(cetp, "ckb_id")
-metabTree <- metabFigure(myData)
+# Comparing treated to control group
+```{r}
+##Order columns based on Diet column (located in column names);
+mSet_FINAL <- metabolomicsDataGroups_transformed[order(metabolomicsDataGroups_transformed$Diet),]
 
-gridData <- formatData(myData, colorValue="estimate", sizeValue = "negLog10P", nightingale = TRUE)
+##Create one dataframe for the control group:
+mSet_control <- subset(mSet_FINAL, mSet_FINAL$Diet == 'C_diet')
+#Size of control group:
+mSet_control_size <- nrow(mSet_control)
 
-treeInput <- multiPlotInput(colorList=gridData$colorList, 
-                            sizeList=gridData$sizeList, 
-                            nightingale=TRUE, legendHeight=8)
+##Create another dataframe for the treated group:
+mSet_treated <- subset(mSet_FINAL, mSet_FINAL$Diet == 'Ex_diet')
+#Size of experimental group:
+mSet_treated_size <- nrow(mSet_treated)
 
-treeList <- bubbleHeatmapList(treeInput)
+# The groups are of unequal size (which you would normally want to compensate for; we will take the data as it is)
+##The unpaired two-samples t-test is used to compare the mean of two independent groups.
+# T-test for one specified column:
+#tTestresults <- t.test(mSet_control$XXL.VLDL.P, mSet_treated$XXL.VLDL.P, alternative = "two.sided", var.equal = FALSE)
 
-metabTree <- metabFigurePlot(treeList)
+# Ttest for all columns:
+tests_list <- lapply(names(mSet_FINAL[5:ncol(mSet_FINAL)]), function(x) t.test(as.formula(paste0(x, "~ grp")), data = mSet_FINAL[,5:ncol(mSet_FINAL)]))
 
-grid.newpage()
-grid.draw(metabTree)
+result <- do.call(rbind, lapply(tests_list, `[[`, "estimate"))
+pval <- sapply(tests_list, `[[`, "p.value")
+result <- cbind(names(mSet_FINAL[5:ncol(mSet_FINAL)]), result, p.value = pval)
+
 ```
