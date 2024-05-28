@@ -2,7 +2,7 @@
 title: "metabolomicsProcessingDIY"
 author: 
 - "DeniseSl22"
-- "YourGithubUserName"
+- "tmgdronkers"
 date: "17/05/24"
 output:
  md_document:
@@ -27,6 +27,7 @@ library(stringr)
 ```{r}
 #Download ‘readxl’ package
 #Load the ‘readxl’ package
+library(readxl)
 
 #Add data location as variable
 #Read the first tab of the data file
@@ -235,3 +236,8 @@ pval <- sapply(tests_list, `[[`, "p.value")
 result <- cbind(names(mSet_FINAL[5:ncol(mSet_FINAL)]), result, p.value = pval)
 
 ```
+
+```{r}
+
+```
+
