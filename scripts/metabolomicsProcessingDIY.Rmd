@@ -27,12 +27,17 @@ library(stringr)
 ```{r}
 #Download ‘readxl’ package
 #Load the ‘readxl’ package
+install.packages("read.csv")
 library(readxl)
+
 
 #Add data location as variable
 #Read the first tab of the data file
 
 #Make a copy of the data to compare against if needed
+
+metabolomicsData <- read_excel("C:/Users/Tessa/Documents/GitHub/Workshop1/scripts/Data/NoMa_NMR_intervention_GEOcodes_Sent Susan.xlsx")
+metabolomicsData_copy <- metabolomicsData
 ```
 
 ## Second programming tasks
@@ -43,14 +48,16 @@ library(readxl)
 metabolomicsData[metabolomicsData == "NA"] <- NA
 
 # Check how many NAs are part of sample '2_A5'.
-sum(is.na(metabolomicsData$`Sample name` == "...")) ##Fill in the missing information at the '...'
+sum(is.na(metabolomicsData$`Sample name` == "2_A5")) ##Fill in the missing information at the '...'
 
 # Install the required package
-####..... missing step ...####
-####..... missing step ...####
+install.packages("heatmaply")
+library(heatmaply)
 
 #Visualize this information in a heatmap
-heatmaply::heatmaply(is.na10(metabolomicsData[,3:100], grid_gap = 1, colors = heat.colors(200), showticklabels = c(T, F), margins = c(80, 10)))
+heatmap1 <- heatmaply::heatmaply(is.na10(metabolomicsData[,3:100], grid_gap = 1, colors = heat.colors(200), showticklabels = c(T, F), margins = c(80, 10)))
+
+heatmap1
 ```
 
 ## Third programming tasks
@@ -59,47 +66,50 @@ heatmaply::heatmaply(is.na10(metabolomicsData[,3:100], grid_gap = 1, colors = he
 metabolomicsData <- data.frame(metabolomicsData[,1:2], lapply(metabolomicsData[,3:length(metabolomicsData)],as.numeric))
 
 # Remove rows with too many NAs
-metabolomicsData <- metabolomicsData[complete.cases(metabolomicsData[ , 3:length(metabolomicsData)]),]
+metabolomicsData_noNA <- metabolomicsData[complete.cases(metabolomicsData[ , 3:length(metabolomicsData)]),]
 
 # Visualize all information in a heatmap
+heatmap2 <- heatmaply::heatmaply(metabolomicsData_noNA[,3:100], grid_gap = 1, colors = hcl.colors(200), showticklabels = c(T, F), margins = c(80, 10))
+
+heatmap2
 ####..... missing step ...#### Tip: use the previous line of code for heatmaply, without counting NAs. When in doubt, type ?heatmaply in the console below, to open a help menu for this function and example.
 ```
 
 ## Fourth programming tasks: check data distribution
 ```{r}
 #filter out data if the 'Sample name' column is NA 
-metabolomicsData <- subset(metabolomicsData, !is.na(metabolomicsData$...))
-
+metabolomicsData_samples <- subset(metabolomicsData_noNA, !is.na(metabolomicsData_noNA$'Sample.name'))
+metabolomicsData_samples
 # Inspect the remaining samples names; do any stand out (in a negative way)? If yes, remove these. Note: != stands for 'is not equal to'
-metabolomicsData <- subset(metabolomicsData, metabolomicsData$Sample.name != '...')
+metabolomicsData_samples <- subset(metabolomicsData_samples, metabolomicsData_samples$Sample.name != 'missing Gex')
 
 # Download the file 'targets.csv' from Surfdrive, add this to the Data folder, and change the location of data you want to load
-dataLocation <- paste0(getwd(), '/Data/ ... .csv')
+dataLocation2 <- paste0(getwd(), '/Data/targets.csv')
 
 # Load the targets data
-treatmentData <- read.csv(dataLocation, header = TRUE)
+treatmentData <- read.csv(dataLocation2, header = TRUE)
 
 # Clean up the sample names (since they are not the same for metabolomics)
 treatmentData$SampleName<-gsub("X","",as.character(treatmentData$SampleName)) #Remove the 'X' from sample names
 treatmentData$SampleName<-gsub("\\..*","",as.character(treatmentData$SampleName)) #Remove all data after the '.'
-treatmentData$...<-gsub("line","",as.character(treatmentData$...)) #Remove the word 'line' in the second column (Timepoint)
+treatmentData$Timepoint<-gsub("line","",as.character(treatmentData$Timepoint)) #Remove the word 'line' in the second column (Timepoint)
 
 #rename columns of treatmentData to match with metabolomics data
-colnames(treatmentData) <- c("Sample.name","Timepoint","Diet" )
+colnames(treatmentData) <- c("Sample.name","Timepoint","Diet")
 
 # Finally, combine this data (specifically column 3 from targets data) with the metabolomics data
-metabolomicsDataGroups <- merge(treatmentData, metabolomicsData,by="Sample.name")
+metabolomicsDataGroups <- merge(treatmentData, metabolomicsData_samples,by="Sample.name")
 
 #Sanity check: do all the timepoints (base,end) from treatmentData match with the metabolomics data time column
 all(metabolomicsDataGroups$Timepoint == metabolomicsDataGroups$time) ##If this is FALSE, please check your data against the Copy you made at the start.
 
 #Count number of columns
-##columns <- ncol(metabolomicsDataGroups) ##To apply transformation on all columns
+columns <- ncol(metabolomicsDataGroups)##To apply transformation on all columns
 columns <- 102 ##To use the actual data, not calculated ratios based on this data.
 
 ##Transformation (see https://doi.org/10.1177%2F1469066720918446 and https://www.statology.org/transform-data-in-r/)
 ##Users can select different transformation styles here:
-transformation <- "log_2" # options are: log_2, log_10, square_root, cube_root
+transformation <- "cube_root" # options are: log_2, log_10, square_root, cube_root
 #############TRY OUT OTHER TRANSFORMATIONS AS WELL!!#############
 
 if(transformation == "cube_root"){
@@ -138,6 +148,10 @@ if(metabolomicsDataGroups_transformed_Shapiro_pvalues_sum[1] > percentageThresho
   print("Advised to select a different data transformation procedure")}
 
 # Visualize all information in a heatmap
+heatmap3 <- heatmaply::heatmaply(metabolomicsDataGroups_transformed[,5:100], grid_gap = 1, colors = hcl.colors(200), showticklabels = c(T, F), margins = c(80, 10))
+
+heatmap3
+
 ```
 
 
@@ -161,16 +175,27 @@ data <- read.table("https://raw.githubusercontent.com/holtzy/data_to_viz/master/
   mutate(tip = round(tip/total_bill*100, 1))
   
 # Grouped
-data %>%
+test <- data  %>% 
+    mutate(day= sort(day)) %>% 
+    mutate(tip = sort(tip))
+
+test2 <- data %>% order(data$tip)
+
+test3 <- data %>%
   mutate(day = fct_reorder(day, tip)) %>%
-  mutate(day = factor(day, levels=c("Thur", "Fri", "Sat", "Sun"))) %>%
-  ggplot(aes(fill=sex, y=tip, x=day)) + 
-    geom_violin(position="dodge", alpha=0.5, outlier.colour="transparent") +
+  mutate(day = factor(day, levels=c("Thur", "Fri", "Sat", "Sun")))
+
+plot <- data %>%
+  ggplot(aes(fill=sex, y=tip, x=factor(day, levels=c("Thur", "Fri", "Sat", "Sun")))) + 
+    geom_violin(position="dodge", alpha=0.5) +
     scale_fill_viridis(discrete=T, name="") +
     theme_ipsum()  +
     xlab("") +
     ylab("Tip (%)") +
     ylim(0,40)
+
+plot
+
 ```
 
 # Find Outliers by visualising violin plots on own data
@@ -186,16 +211,26 @@ maxVerticalAxis <- max(metabolomicsDataGroups_transformed[,columnNumber])
   
 # Grouped
 metabolomicsDataGroups_transformed %>%
-  mutate(Diet =  fct_reorder(Diet, IDL.L)) %>%
-  mutate(Diet = factor(Diet, levels=c("Control", "Experimental"))) %>%
-  ggplot(aes(fill=Diet, y=IDL.L, x=time)) + 
+  mutate(Diet = factor(Diet, levels=c("C_diet", "Ex_diet"))) %>%
+  ggplot(aes(fill=Diet, colour=Diet, y=IDL.L, x=time)) + 
     geom_violin(position="dodge", alpha=0.5, trim = FALSE, scale = "count") +
     geom_quasirandom() + ##Alternativ geom_beeswarm() + 
-    scale_fill_viridis(discrete=T, name="Timepoints") +
+    scale_fill_viridis(discrete=T, name="Timepoint") +
     theme_ipsum()  +
     xlab(lipidClassName) +
     ylab("Measurement (transformed)") +
     ylim(0,maxVerticalAxis)
+
+metabolomicsDataGroups_transformed %>% 
+    ggplot(aes(fill=Diet, colour=Diet, y=IDL.L, x=time)) +
+    geom_violin() +
+    geom_quasirandom() +
+    xlab(lipidClassName) +
+    ylab(paste("Measurement (transformed)")) #+
+    ylim(0,maxVerticalAxis)
+
+
+
 ```
 
 # Visualising ratio data
