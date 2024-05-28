@@ -225,6 +225,9 @@ mSet_treated_size <- nrow(mSet_treated)
 #tTestresults <- t.test(mSet_control$XXL.VLDL.P, mSet_treated$XXL.VLDL.P, alternative = "two.sided", var.equal = FALSE)
 
 # Ttest for all columns:
+
+#####Task: create a variable 'grp' which uses the data in the 'Diet' column from the mSet_FINAL dataframe #####
+
 tests_list <- lapply(names(mSet_FINAL[5:ncol(mSet_FINAL)]), function(x) t.test(as.formula(paste0(x, "~ grp")), data = mSet_FINAL[,5:ncol(mSet_FINAL)]))
 
 result <- do.call(rbind, lapply(tests_list, `[[`, "estimate"))
