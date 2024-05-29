@@ -89,12 +89,14 @@ dev.off()
     'Ontology_Function', 'Synonyms'))]
   annot <- annot[which(annot$Probe_Id %in% rownames(x)),]
   annot <- annot[match(rownames(x), annot$Probe_Id),]
+  view(annot)
 ```
 
 
 ```{r}
 # read in target file, this file contains the information about the timepoint and diet group
 targets <- read.csv('datasets/targets.csv')
+view(targets)
 ```
 
 
@@ -119,7 +121,7 @@ targets <- read.csv('datasets/targets.csv')
 # for BeadArrays, background correction and normalisation are handled by a single function: neqc()
 # this is the same as per Agilent single colour arrays
 ```{r}
-project.bgcorrect.norm <- neqc(project, offset = 16)
+project.bgcorrect.norm <- neqc(project, offset = 16) #function similar to dseq2 for rnaseq data
 ```
 
 
@@ -161,6 +163,7 @@ project.bgcorrect.norm <- neqc(project, offset = 16)
 
 ```{r}
 expression_data<-as.data.frame(project.bgcorrect.norm.filt.mean[["E"]])
+
 ```
 
 
@@ -176,6 +179,7 @@ dev.off()
 
 ```{r}
 #calculate no of samples below p values of 0.01
+detection_probe <- as.data.frame(project.bgcorrect.norm.filt.mean[["other"]][["Detection"]])
 boolean_values<-detection_probe<0.01
 
 count_true = data.frame(matrix(NA, nrow = nrow(detection_probe), ncol = 1))
@@ -187,6 +191,7 @@ for (row in 1:nrow(detection_probe)){
   count_false[row,1]<-length(boolean_values[row,][boolean_values[row,]==FALSE])
   percent_true[row,1]<-count_true[row,1]*100/54
 }
+
 ```
 
 
@@ -228,11 +233,9 @@ cont.matrix <- makeContrasts(
   levels=design) 
 fit2 <- contrasts.fit(fit, cont.matrix) 
 fit2 <- eBayes(fit2)
-TopTable_Ex_diet <- topTable(fit2, adjust.method="BH", coef="ExDiet_end_vs_baseline", number=Inf)
+TopTable_Ex_diet <- topTable(fit2, adjust.method="BH", coef="ExDiet_end_vs_baseline", number=Inf) #BH = Benjamin-Halles correction for multiple testing
 TopTable_C_diet <- topTable(fit2, adjust.method="BH", coef="CDiet_end_vs_baseline", number=Inf)
 ```
-
-
 
 
 ```{r}
